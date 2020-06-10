@@ -13,9 +13,16 @@ client.on("message", msg => {
     if (!msg.content.startsWith('?')) return;
 
     const withoutPrefix = msg.content.slice(1);
-	const split = withoutPrefix.split(/ +/);
-	const command = split[0];
+    //split up message into array divided by spaces
+    const split = withoutPrefix.split(/ +/);
+    
+    //get part after ?. e.g. ?play
+    const command = split[0];
+    
+    //get the rest of the arry besides the comman
     const args = split.slice(1);
+
+    console.log(split);
     
 
     if (command === 'cat') {
@@ -84,6 +91,7 @@ client.on("message", msg => {
     }
 
     voiceChannel.join().then(connection => {
+
         const stream = ytdl('https://www.youtube.com/watch?v=kPkT0jMjEu8', { filter: 'audioonly' });
         const dispatcher = connection.play(stream);
 
@@ -108,4 +116,4 @@ function getUserFromMention(mention) {
 	}
 }
 
-client.login("NzIwMjA4ODI5OTEyMDU1ODc5.XuCxZg.Oo7waWuJDMC1AyyuEKZk6a1uudc")
+client.login("NzIwMjA4ODI5OTEyMDU1ODc5.XuDWAg.b9CQaPRNkosFeA1cDs-7PpCHvMU")
