@@ -5,14 +5,18 @@
   "main": "discordbot.js",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
+    "axios": "^0.19.2",
     "discord.io": "^2.5.3",
     "discord.js": "^12.2.0",
     "ffmpeg-static": "^4.2.2",
+    "lol-champions": "^10.12.1",
+    "lol-items": "^7.8.1",
     "node-fetch": "^2.6.0",
+    "random-reddit": "^2.0.3",
     "ytdl-core": "^2.1.7"
   },
-  "devDependencies": {},
   "scripts": {
+    "start": "node discordbot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
